@@ -1,0 +1,64 @@
+baseURL = 'https://phaselocking.cc/'
+languageCode = 'zh-cn'
+defaultContentLanguage = 'zh'
+title = '相位锁定 · PhaseLocking'
+theme = 'PaperMod'
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  description = '让流淌的生活，不再流逝'
+  defaultTheme = 'auto'
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+
+  [params.homeInfoParams]
+    Title = "相位锁定 · PhaseLocking"
+    Content = """
+👋 你好，这里是 PhaseLocking 的个人空间。
+    
+**相位锁定**（Phase Locking）——两个振荡器同步到同一频率。
+    
+洛希极限是靠近不被撕碎的最短距离，相位锁定是同频共振。
+    
+这里记录我的 case study、成长弧线和认知晶石。
+"""
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/"
+
+[params.editPost]
+  URL = ""
+  Text = ""
+  appendFilePath = false
+
+[outputs]
+  home = ["HTML", "RSS"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.cjk]
+        enable = true
+        eastAsianLineBreaks = true
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "文章"
+    url = "/posts/"
+    weight = 10
+  [[menu.main]]
+    identifier = "about"
+    name = "关于"
+    url = "/about/"
+    weight = 20
